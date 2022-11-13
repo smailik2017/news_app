@@ -1,0 +1,12 @@
+p style="color: green" = notice
+
+h1 News
+
+#news
+  - @news.each do |news|
+    == render news
+    p
+    = link_to "Show this news", news
+hr
+
+= link_to "New news", new_news_path

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :news
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'main/index'
@@ -8,5 +9,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  root 'main#index'
+  # root 'main#index'
+  root 'news#index'
+
 end
