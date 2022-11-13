@@ -2,5 +2,5 @@
   = link_to 'sign_in', new_user_session_path if current_user.nil?
 - else
   = link_to 'sign_out', destroy_user_session_path
-  = link_to 'profile', profile_index_path
+  = link_to 'profile', edit_user_registration_path
   = link_to 'main', main_index_path 
