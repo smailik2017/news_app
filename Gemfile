@@ -74,3 +74,5 @@ end
 gem 'slim-rails'
 gem 'devise'
 gem 'bootstrap'
+
+gem 'activeadmin'
