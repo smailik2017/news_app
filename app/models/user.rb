@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   belongs_to :role
 
+  has_rich_text :info
+
   devise :database_authenticatable, :registerable
 
 end
