@@ -2,9 +2,14 @@ div id="#{dom_id news}"
   p
     strong Header:
     =< news.header
-  p
-    strong Content:
-    =< news.content.to_plain_text
+  - if params[:action] == 'show'
+    p
+      strong Content:
+      / = render news.content.body
+
+      = form_with(model: @news) do |form|
+        div
+          = form.rich_text_area :content
   p
     strong User:
     =< news.user.email
