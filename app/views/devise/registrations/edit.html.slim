@@ -11,6 +11,12 @@ h2
     div
       | Currently waiting confirmation for: 
       = resource.unconfirmed_email
+  
+  .field 
+    = f.label :info
+  br
+  = f.rich_text_area :info
+  
   .field
     = f.label :password
     i

@@ -4,7 +4,7 @@ div id="#{dom_id news}"
     =< news.header
   p
     strong Content:
-    =< news.content
+    =< news.content.to_plain_text
   p
     strong User:
     =< news.user.email
