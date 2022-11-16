@@ -5,6 +5,6 @@ p style="color: green" = notice
 div
   => link_to "Edit this news", edit_news_path(@news)
   '|
-  =< link_to "Back to news", news_index_path
+  =< link_to "Back to news", :back
 
   = button_to "Destroy this news", @news, method: :delete

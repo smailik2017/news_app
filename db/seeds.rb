@@ -9,6 +9,7 @@
 News.delete_all
 User.delete_all
 Role.delete_all
+AdminUser.delete_all
 
 PASSWD = '111111'
 
@@ -27,7 +28,7 @@ Role.create!(name: 'User', code: 2)
 end
 
 (1..100).each do |n|
-  News.create!(header: FFaker::Lorem.sentence, 
-               content: FFaker::Lorem.paragraph,
+  News.create!(header: "News#{n} - #{FFaker::Lorem.sentence}", 
+               content: "News#{n} - #{FFaker::Lorem.paragraph}",
                user_id: User.all.sample.id)
 end
