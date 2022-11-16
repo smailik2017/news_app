@@ -5,7 +5,7 @@ h1 News
 #news
   .row
     - @news.each do |news|
-      .col-sm-4
+      .col-sm-2
         == render news
         p
         = link_to "Show this news", news

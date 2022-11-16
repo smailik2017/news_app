@@ -20,7 +20,7 @@ ActiveAdmin.register News do
     f.inputs do
       f.input :header
       f.input :content
-      f.input :user
+      f.input :user, :label_method => :email_name
     end
     f.actions
   end

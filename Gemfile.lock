@@ -114,6 +114,7 @@ GEM
       warden (~> 1.2.3)
     erubi (1.11.0)
     execjs (2.8.1)
+    ffaker (2.21.0)
     ffi (1.15.5)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
@@ -301,6 +302,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  ffaker
   image_processing (~> 1.2)
   importmap-rails
   jbuilder

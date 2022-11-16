@@ -76,3 +76,5 @@ gem 'devise'
 gem 'bootstrap'
 
 gem 'activeadmin'
+
+gem 'ffaker'
