@@ -2,6 +2,9 @@ div id="#{dom_id news}"
   p
     strong Header:
     =< news.header
+    p 
+      <i id="heart_#{news.id}" class="fa-solid fa-heart" onclick="change_color(#{news.id})"> </i>
+
   - if params[:action] == 'show'
     p
       strong Content:
@@ -12,3 +15,4 @@ div id="#{dom_id news}"
   p
     strong User:
     =< news.user.email
+

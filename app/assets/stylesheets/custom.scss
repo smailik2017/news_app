@@ -5,3 +5,11 @@ a {
 body {
   padding-left: 20px;
 }
+
+.fa-heart {
+  color: black;
+  &.fa-heart-red {
+    color: red;
+  }
+}
+
