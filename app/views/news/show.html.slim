@@ -3,8 +3,14 @@ p style="color: green" = notice
 == render @news
 
 div
-  => link_to "Edit this news", edit_news_path(@news)
+  / => link_to "Edit this news", edit_news_path(@news)
+  => link_to "Edit this news", controller: 'news',
+                               action: 'edit',
+                               id: @news.id,
+                               page: params[:page]
   '|
-  =< link_to "Back to news", :back
+  =< link_to "Back to news", controller: 'news',
+                             action: 'index',
+                             page: params[:page]
 
   = button_to "Destroy this news", @news, method: :delete

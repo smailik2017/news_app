@@ -12,5 +12,4 @@ class NewsController < InheritedResources::Base
     def news_params
       params.require(:news).permit(:header, :content, :user_id)
     end
-
 end

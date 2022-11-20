@@ -8,7 +8,11 @@ h1 News
       .col-sm-2
         == render news
         p
-        = link_to "Show this news", news
+        / = link_to "show this news", news
+        = link_to "Show this news", controller: 'news', 
+                                    action: 'show', 
+                                    id: news.id, 
+                                    page: params[:page]
         hr
 hr
 
