@@ -76,3 +76,10 @@ gem 'devise'
 gem 'bootstrap'
 
 gem 'activeadmin'
+
+gem 'ffaker'
+
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+
+gem 'jquery-rails'

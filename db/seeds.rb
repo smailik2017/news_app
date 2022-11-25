@@ -5,4 +5,30 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+News.delete_all
+User.delete_all
+Role.delete_all
+AdminUser.delete_all
+
+PASSWD = '111111'
+
+AdminUser.create!(email: 'admin@example.com', 
+                  password: PASSWD, 
+                  password_confirmation: PASSWD) if Rails.env.development?
+
+Role.create!(name: 'Administrator', code: 1)
+Role.create!(name: 'User', code: 2)
+
+(1..10).each do |n|
+  User.create!(email: "user#{n}@example.com", 
+               password: PASSWD, 
+               password_confirmation: PASSWD, 
+               role_id: Role.where(code: 2).ids.first)
+end
+
+(1..100).each do |n|
+  News.create!(header: "News#{n} - #{FFaker::Lorem.sentence}", 
+               content: "News#{n} - #{FFaker::Lorem.paragraph}",
+               user_id: User.all.sample.id)
+end

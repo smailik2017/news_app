@@ -8,10 +8,13 @@ html
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
-  body
+    = javascript_include_tag 'custom/main' 
+    
+    <script src="https://kit.fontawesome.com/13a38671fd.js" crossorigin="anonymous"></script>  
+  body 
     = render 'shared/header'
     = render 'shared/main_navigation'
     hr
-    = yield
+        = yield
     hr
     = render 'shared/trace'

@@ -11,4 +11,8 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable
 
+  def display_name
+    self.email
+  end
+
 end
