@@ -6,3 +6,4 @@ function change_color(news_id) {
     heart.className = 'fa-solid fa-heart fa-heart-red'
   }
 }
+

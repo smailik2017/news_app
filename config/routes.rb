@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   # root 'main#index'
   root 'news#index'
 
+  resources :colors, only: [:create]
+  
 end

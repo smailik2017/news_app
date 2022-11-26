@@ -13,3 +13,22 @@ body {
   }
 }
 
+.button {
+  color: white;
+  margin-top: 5px;
+  
+  &--green {
+    background-color: green;
+    color: green;
+  }
+  
+  &--blue {
+    background-color: blue;
+    color: blue;
+  }
+
+  &--red {
+    background-color: red;
+    color: red;
+  }
+}
