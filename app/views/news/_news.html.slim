@@ -2,9 +2,11 @@ div id="#{dom_id news}"
   p
     strong Header:
     =< news.header
-    p 
-      <i id="heart_#{news.id}" class="fa-solid fa-heart" onclick="change_color(#{news.id})"> </i>
-
+    p
+      - if news.likes.where(user: current_user).empty?
+        <i id="heart_#{news.id}" class="fa-solid fa-heart" onclick="change_color(#{news.id}, #{current_user.id})"> </i>
+      - else
+        <i id="heart_#{news.id}" class="fa-solid fa-heart fa-heart--red" onclick="change_color(#{news.id}, #{current_user.id})"> </i>
   - if params[:action] == 'show'
     p
       strong Content:

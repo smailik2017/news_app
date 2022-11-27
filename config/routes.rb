@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   root 'news#index'
 
   resources :colors, only: [:create]
+
+  resources :likes, only: [:create]
   
 end
